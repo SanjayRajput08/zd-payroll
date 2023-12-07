@@ -1,6 +1,6 @@
 
 //console.log(process.env.HOST);
-var host = "" 
+// var host = "" 
 // var host = "0.0.0.0" 
  
 

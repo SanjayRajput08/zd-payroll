@@ -107,6 +107,7 @@ function LeaveDetails() {
       .then((response) => {
         let filteredArr = [];
         let filteredObj = {};
+        console.log('---response--->', response);
         let responseArr = response.data.msg;
         responseArr.map((e) => {
           e.result.map((w) => {
@@ -134,7 +135,7 @@ function LeaveDetails() {
   }, []);
   const filteredData = empLeaveData.filter((row) => {
     return (
-      row.First_Name.toLowerCase().includes(searchTerm.toLowerCase())
+      row.First_Name?.toLowerCase().includes(searchTerm?.toLowerCase())
     );
   });
 

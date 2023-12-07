@@ -11,9 +11,12 @@ function Salary() {
   const [empdata, empdatachange] = useState({});
   const [fields, setFields] = useState({
     arrear: 0,
-    additional: 0,
-    arrear_comment: "",
-    additional_comment: "",
+    // additional: 0,
+    // arrear_comment: "",
+    // additional_comment: "",
+    Comp_Off_Days:0,
+    ECSI: 0,
+    Bonus: 0,
     overwrite_payslip: false,
   });
   const [switchToAdvance, setSwitchToAdvance] = useState(false);
@@ -191,24 +194,22 @@ function Salary() {
                       </div>
                       <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div className="form-group">
-                          <label className="profile_details_text">
-                            Additional
-                          </label>
+                          <label className="profile_details_text">Comp off Days</label>
                           <input
                             type="number"
                             style={{ textTransform: "capitalize" }}
-                            name="additional"
+                            name="Comp_Off_Days"
                             minLength="2"
                             maxLength="50"
                             className="form-control"
-                            placeholder="Additional Amount"
-                            value={fields.additional}
+                            placeholder="Comp off Days"
+                            value={fields.Comp_Off_Days}
                             onChange={(e) => handleChange(e)}
                           />
                         </div>
                       </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                       <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div className="form-group">
                           <label className="profile_details_text">
@@ -241,6 +242,42 @@ function Salary() {
                             onChange={(e) => handleChange(e)}
                           ></textarea>
                           <div className="errorMsg"></div>
+                        </div>
+                      </div>
+                    </div> */}
+                    <div className="row">
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="form-group">
+                          <label className="profile_details_text">ECSI</label>
+                          <input
+                            type="number"
+                            style={{ textTransform: "capitalize" }}
+                            name="ECSI"
+                            minLength="2"
+                            maxLength="50"
+                            className="form-control"
+                            placeholder="ECSI"
+                            value={fields.ECSI}
+                            onChange={(e) => handleChange(e)}
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="form-group">
+                          <label className="profile_details_text">
+                            Bonus
+                          </label>
+                          <input
+                            type="number"
+                            style={{ textTransform: "capitalize" }}
+                            name="Bonus"
+                            minLength="2"
+                            maxLength="50"
+                            className="form-control"
+                            placeholder="Bonus"
+                            value={fields.Bonus}
+                            onChange={(e) => handleChange(e)}
+                          />
                         </div>
                       </div>
                     </div>

@@ -135,7 +135,21 @@ const Salary = Schema({
     Additional_Comment: {
         type: String,
         default: ""
-    }
+    },
+    ECSI: {
+        type: Number,
+        default: 0,
+    },
+
+    Bonus: {
+        type: Number,
+        default: 0,
+    },
+
+    Comp_Off_Days: {
+        type: Number,
+        default: 0,
+    },
 },
     {
         timestamps: true
